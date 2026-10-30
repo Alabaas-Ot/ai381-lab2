@@ -1,0 +1,7 @@
+services:
+  api:
+    build: .
+    image: ai381-lab2:local
+    ports:
+      - "8000:8000"
+    restart: unless-stopped
