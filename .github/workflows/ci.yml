@@ -54,8 +54,9 @@ jobs:
         run: docker build -t "$IMAGE:$IMAGE_TAG" .
 
       - name: Scan image with Trivy
-        uses: aquasecurity/trivy-action@76071ef0d7ec797419534a183b498b4d6366cf37
+        uses: aquasecurity/trivy-action@ed142fd0673e97e23eac54620cfb913e5ce36c25
         with:
+          version: v0.76.1
           image-ref: ghcr.io/alabaas-ot/ai381-lab2:${{ github.sha }}
           format: table
           severity: CRITICAL,HIGH
