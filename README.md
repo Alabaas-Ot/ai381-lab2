@@ -46,3 +46,8 @@ GitHub Actions runs lint and tests on every pull request to main.
 
 On pushes to main, it builds the Docker image, scans it using Trivy,
 and pushes it to GitHub Container Registry (GHCR) with the commit SHA tag.
+
+## Pull Request workflow
+
+Changes are developed on separate branches and merged into main
+through pull requests after automated checks pass.
